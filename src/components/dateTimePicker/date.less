@@ -1,0 +1,98 @@
+.date-calendar {
+  width: 300px;
+  padding: 10px;
+  font-size: 14px;
+  .date-calendar-header {
+    display: flex;
+    justify-content: space-between;
+    i {
+      cursor: pointer;
+      &.is-disable {
+        cursor: no-drop;
+      }
+    }
+    .left {
+      .icon_right {
+        transform: rotate(180deg);
+        margin-left: 10px;
+      }
+    }
+    .right {
+      .icon_right {
+        margin-right: 10px;
+      }
+    }
+  }
+  .date-table {
+    width: 100%;
+    text-align: center;
+    border-spacing: 0;
+    font-size: 12px;
+    user-select: none;
+    th {
+      padding: 5px;
+      border-bottom: 1px solid #eee;
+    }
+    td {
+      position: relative;
+      width: 37px;
+      height: 30px;
+      padding: 4px 0;
+      box-sizing: border-box;
+      cursor: pointer;
+    }
+    .date-table_row {
+      line-height: 30px;
+      .date-table_col {
+        color: #c0c4cc;
+        &.available {
+          color: #595959;
+        }
+        &.today {
+          color: #409eff;
+          font-weight: 500;
+        }
+        &.start-date, &.end-date {
+          color: #fff;
+          .date-table-cell {
+            background-color: #d9ecff;
+          }
+          .date-table-cell_text {
+            background-color: #409eff;
+          }
+        }
+        &.in-range {
+          .date-table-cell {
+            background-color: #d9ecff;
+          }
+        }
+        &.start-date .date-table-cell {
+          margin-left: 5px;
+          border-top-left-radius: 15px;
+          border-bottom-left-radius: 15px;
+        }
+        &.end-date .date-table-cell {
+          margin-right: 5px;
+          border-top-right-radius: 15px;
+          border-bottom-right-radius: 15px;
+        }
+        .date-table-cell {
+          height: 30px;
+          .date-table-cell_text {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            left: 50%;
+            transform: translate(-50%);
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            line-height: 24px;
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+  }
+}
